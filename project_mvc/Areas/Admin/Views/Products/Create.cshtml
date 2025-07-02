@@ -1,0 +1,69 @@
+﻿@model Product
+@section Title {
+            Products
+}
+@section heading {
+            Create
+}
+<<<<<<< HEAD
+
+<form method="post" action="/admin/Products/create" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" value="@Model?.Name" type="text" class="form-control" placeholder="Name">
+=======
+<form method="post" action="/admin/Products/create" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <label  for="exampleInputName">Name</label>
+        <input  name="Name" value="@Model?.Name" type="text" class="form-control" id="exampleInputName" placeholder="Name">
+>>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72
+        <span asp-validation-for="Name" class="text-danger"></span>
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputDesc">Description</label>
+        <textarea name="Description" class="form-control" id="exampleInputDesc" placeholder="enter description"></textarea>
+    </div>
+    <div class="form-group">
+<<<<<<< HEAD
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+=======
+        <label for="exampleInputPrice">Price</label>
+        <input name="Price" type="number" class="form-control" id="exampleInputPrice" placeholder="enter price">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputqua">Quantity</label>
+        <input name="Quantity" type="number" class="form-control" id="exampleInputqua" placeholder="enter quantity">
+>>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72
+    </div>
+    <div class="form-group">
+        <label for="exampleInputqua">Image</label>
+        <input name="Image" type="file" class="form-control" id="exampleInputqua">
+        <span asp-validation-for="Image" class="text-danger"></span>
+
+    </div>
+    <label>Category</label>
+    <select class="form-control mb-3" name="CategoryId">
+        @foreach (var item in ViewBag.category)
+        {
+            <option value="@item.Id">@item.Name</option>
+
+        }
+</select>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+<<<<<<< HEAD
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+=======
+>>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72

@@ -1,0 +1,23 @@
+﻿@model List<Category>
+@section Title {
+        Categories
+}
+@section heading {
+        Create
+}
+<form method="post" action="/admin/categories/create" enctype="multipart/form-data">
+
+<div class="form-group">
+    <label for="exampleInputName">Name</label>
+        <input name="Name"  type="text" class="form-control" id="exampleInputName" placeholder="Name">
+</div>
+    <div class="form-group">
+        <label for="exampleInputName">image</label>
+        <input name="Image" type="file" class="form-control" id="exampleInputName">
+    </div>
+<button  type="submit" class="btn btn-primary">Create</button>
+</form>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72

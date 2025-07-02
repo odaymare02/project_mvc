@@ -1,0 +1,70 @@
+﻿@model List<Product>
+@section Title {
+            Products
+}
+@section heading {
+        Show
+}
+<<<<<<< HEAD
+@section style {
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+}
+=======
+>>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th style="width: 10px">#</th>
+            <th>Title</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+<<<<<<< HEAD
+        @for(int i=0;i<Model.Count;i++)
+        {
+            <tr>
+                <td>
+                    @(i+1)
+                </td>
+                <td>
+                    @(Model[i].Name)
+                </td>
+                <td>
+                    <a onclick="return confirm(`are you sure want to delete?`);" href="/admin/products/delete/@(Model[i].Id)" type="button" class="btn btn-outline-danger ">Delete</a>
+                    <a href="/admin/products/edit/@(Model[i].Id)" type="button" class="btn btn-outline-danger ">Edit</a>
+=======
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    <a onclick="return confirm(`are you sure want to delete?`);" href="/admin/products/delete/@item.Id" type="button" class="btn btn-outline-danger ">Delete</a>
+                    <a href="/admin/products/edit/@item.Id" type="button" class="btn btn-outline-danger ">Edit</a>
+>>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72
+
+                </td>
+            </tr>
+        }
+    </tbody>
+<<<<<<< HEAD
+</table>
+@section script
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+         var successMessage = '@TempData["success"]';
+        if (successMessage) {
+            toastr.success(successMessage);
+        }
+
+    </script>
+}
+=======
+</table>
+>>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72

@@ -1,0 +1,47 @@
+﻿@model List<Category>
+@section Title{
+    Categories
+}
+@section heading{
+    show
+}
+@section style{
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+}
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th style="width: 10px">#</th>
+            <th>Title</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                 </td>
+                 <td>
+                    @item.Name
+                </td>
+                <td>
+                    <a onclick="return confirm(`are you sure want to delete?`);" href="/admin/categories/delete/@item.Id" type="button" class="btn btn-outline-danger ">Delete</a>
+                    <a  href="/admin/categories/edit/@item.Id" type="button" class="btn btn-outline-danger ">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section script
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+         var successMessage = '@TempData["success"]';
+        if (successMessage) {
+            toastr.success(successMessage);
+        }
+
+    </script>
+}

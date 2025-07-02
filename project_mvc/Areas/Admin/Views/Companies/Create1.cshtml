@@ -1,0 +1,35 @@
+﻿@model Company
+@section Title {
+            Company
+}
+@section heading {
+            Create
+}
+<form asp-area="admin" asp-action="cerate" asp-controller="Companies" >
+
+    <div class="form-group">
+        <label asp-for="Name">comp name</label>
+        @*<label for="exampleInputName">Name</label>*@
+        <input asp-for="Name"  class="form-control" placeholder="name"/>
+        <span class="text-danger" asp-validation-for="Name"></span>
+        @*<input name="Name" type="text" class="form-control" id="exampleInputName" placeholder="Name">*@
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+@*
+    this using html helper
+@using(@Html.BeginForm(FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(c=>c.Name)
+        @Html.EditorFor(c=>c.Name,new{htmlAttributes=new{ @class="form-control"}})
+        @Html.ValidationMessageFor(c=>c.Name);
+    </div>
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+*@
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
