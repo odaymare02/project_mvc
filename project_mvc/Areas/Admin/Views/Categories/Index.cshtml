@@ -17,18 +17,18 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var item in Model)
+        @for(int i=0;i<Model.Count;i++)
         {
             <tr>
                 <td>
-                    @item.Id
+                    @(i+1)
                  </td>
                  <td>
-                    @item.Name
+                    @(Model[i].Name)
                 </td>
                 <td>
-                    <a onclick="return confirm(`are you sure want to delete?`);" href="/admin/categories/delete/@item.Id" type="button" class="btn btn-outline-danger ">Delete</a>
-                    <a  href="/admin/categories/edit/@item.Id" type="button" class="btn btn-outline-danger ">Edit</a>
+                    <a onclick="return confirm(`are you sure want to delete?`);" href="/admin/categories/delete/@Model[i].Id" type="button" class="btn btn-outline-danger ">Delete</a>
+                    <a  href="/admin/categories/edit/@Model[i].Id" type="button" class="btn btn-outline-danger ">Edit</a>
                 </td>
             </tr>
         }

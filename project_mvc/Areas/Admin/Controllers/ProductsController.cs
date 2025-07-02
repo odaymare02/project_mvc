@@ -47,10 +47,7 @@ namespace project_mvc.Areas.Admin.Controllers
                 var fileName = await imgServ.UploadImage(Image);
                 request.Image = fileName;//only name store inside the database
                 contex.products.Add(request);
-<<<<<<< HEAD
                 TempData["success"] = "the operation was copleted success";
-=======
->>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72
                 contex.SaveChanges();
                 return RedirectToAction("index");
         }

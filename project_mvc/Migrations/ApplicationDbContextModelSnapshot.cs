@@ -108,11 +108,8 @@ namespace project_mvc.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-<<<<<<< HEAD
-                    b.Property<int?>("CompanyId")
-=======
+                    b.Property<int?>("CompanyId");
                     b.Property<int>("CompanyId")
->>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72
                         .HasColumnType("int");
 
                     b.Property<string>("Description")
@@ -155,13 +152,10 @@ namespace project_mvc.Migrations
 
                     b.HasOne("project_mvc.Models.Company", "Company")
                         .WithMany("Products")
-<<<<<<< HEAD
-                        .HasForeignKey("CompanyId");
-=======
+                        .HasForeignKey("CompanyId")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
->>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72
 
                     b.Navigation("Category");
 

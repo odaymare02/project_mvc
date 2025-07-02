@@ -19,11 +19,7 @@ namespace project_mvc.Models
         public string? Image { get; set; }
         [Range(0, 5)]
         public double Rate { get; set; }
-<<<<<<< HEAD
         public int? CompanyId { get; set; }
-=======
-        public int CompanyId { get; set; }
->>>>>>> 5f29b9ff7e1d1e78649a68071e7e585a34789e72
         [ValidateNever]
         public Company Company { get; set; }
         public int CategoryId { get; set; }
